@@ -12,6 +12,7 @@
   align-items: center;
   grid-template-columns: 1fr 1fr;
   z-index: -1;
+  margin-top: 8.4rem;
 }
 
 .main-info{

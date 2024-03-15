@@ -58,4 +58,5 @@ const FrameworksAndTools = [
         logo: "./images/aws.svg"
     },
 ]
-export { Proficient, Familiar }
+
+export { Languages, FrameworksAndTools };
