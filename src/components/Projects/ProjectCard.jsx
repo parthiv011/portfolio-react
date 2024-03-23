@@ -1,9 +1,10 @@
 import './Project.css';
-import projects from '../../utils/Data';
+import projects from '../../utils/data';
+import { useRef } from 'react';
 
 export const ProjectCard = () => {
   return (
-    <section className='flex-grid'>
+    <section className='flex-grid' id='projects'>
       <header className="project-header">Projects</header>
       <div className='projects-container'>
       {projects.map((project, index) => (
@@ -16,7 +17,7 @@ export const ProjectCard = () => {
             <p>{project.description}</p>
             <div className='tech-stack'>
             {project.tools.map(tool => (
-              <p>{tool}</p>
+              <p key={tool}>{tool}</p>
             ) )}
               
             </div>

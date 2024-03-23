@@ -1,0 +1,61 @@
+:root {
+  --primaryColor: black; /*black*/
+  --secondaryColor: white; /*white */
+  --hoverColor: #9999ff;
+  --btncolor: #0000ff;
+}
+.blogs {
+  margin: 4rem;
+}
+.blogs > header {
+  font-size: 6rem;
+  font-weight: 500;
+  text-align: center;
+}
+.blog-container {
+  display: flex;
+  gap: 3rem;
+}
+.blog-card {
+  display: flex;
+  margin-top: 4rem;
+  flex-direction: column;
+  width: 100%;
+}
+.blog-card picture {
+  width: 100%;
+  object-fit: cover;
+}
+.blog-card picture > img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: 1rem 1rem 0 0;
+}
+.blog-title {
+  font-size: 3rem;
+  font-weight: 300;
+}
+.blog-description {
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: rgb(212, 212, 212);
+}
+.blog-card > article > div {
+  margin-top: 1.4rem;
+}
+.btn-link:link,
+.btn-link:visited {
+  color: var(--secondaryColor);
+  font-size: 1.8rem;
+  text-decoration: none;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  background-color: var(--btncolor);
+}
+
+.btn-link:hover {
+  background-color: #3838ce;
+  transition: ease-in-out 1s;
+  cursor: pointer;
+}

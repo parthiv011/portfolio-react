@@ -10,10 +10,8 @@
   flex-direction: column;
   width: 100%;
 }
-.projects-container{
-    display: flex;
-    /* flex-wrap: wrap; */
-    padding: 4rem;
+.projects-container {
+  display: flex;
 }
 .project-header {
   color: white;
@@ -49,7 +47,7 @@
   font-weight: 200;
   /* padding: 1rem; */
 }
-.links{
+.links {
   margin-top: 1.4rem;
 }
 .links a {
@@ -61,14 +59,20 @@
   border-radius: 1rem;
   font-size: 1.4rem;
 }
-.tech-stack{
+.tech-stack {
   display: flex;
   flex-wrap: wrap;
 }
 .tech-stack p {
   border: 1px solid white;
   margin: 4px;
-  padding: .6rem;
+  padding: 0.6rem;
   border-radius: 4px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+}
+
+.links a:hover {
+  background-color: #3838ce;
+  transition: ease-in-out 1s;
+  cursor: pointer;
 }

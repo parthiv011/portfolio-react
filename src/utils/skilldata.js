@@ -17,7 +17,7 @@ const Languages = [
     },
     {
         skill: "Typescript",
-        logo: './images/ts.png'
+        logo: './images/ts.svg'
     }
 ]
 const FrameworksAndTools = [

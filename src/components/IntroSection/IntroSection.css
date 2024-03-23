@@ -1,9 +1,9 @@
 :root {
-    --primaryColor: black; /*black*/
-    --secondaryColor: white; /*white */
-    --hoverColor: #9999ff;
-    --btncolor: #0000ff;
-  }
+  --primaryColor: black; /*black*/
+  --secondaryColor: white; /*white */
+  --hoverColor: #9999ff;
+  --btncolor: #0000ff;
+}
 
 .main-intro {
   display: grid;
@@ -15,7 +15,7 @@
   margin-top: 8.4rem;
 }
 
-.main-info{
+.main-info {
   margin-left: 5rem;
 }
 
@@ -23,18 +23,14 @@
   font-size: 4.2rem;
   font-weight: 900;
   background-color: #4158d0;
-  background-image: linear-gradient(
-    43deg,
-    #9999ff 0%,
-    white 46%,
-    #0000ff 100%
-  );
-
-  background-clip: border-box;
-  -webkit-background-clip: text;
+  background: linear-gradient(43deg, #6b6bb7 0%, white 46%, #0000ff 100%);;
+  /* background-clip: border-box; */
+  background-size: 200% auto;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: animatedTextGradient 1.5s linear reverse;
 }
-.btn-container{
+.btn-container {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
@@ -43,7 +39,7 @@
   font-size: 1.8rem;
   font-weight: 400;
 }
-
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -65,16 +61,23 @@
   color: var(--btncolor);
 }
 
-video{
+video {
   width: 100%;
 }
 
 /* hover effects */
-.active:hover,
-.active:active {
+button:hover {
+  cursor: pointer;
   background-color: #000080;
 }
 .outline:hover,
 .outline:active {
   background-color: var(--hoverColor);
+}
+
+/* media queries */
+@keyframes animatedTextGradient {
+  to {
+    background-position: 200% center;
+  }
 }

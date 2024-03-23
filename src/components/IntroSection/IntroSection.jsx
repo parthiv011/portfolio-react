@@ -1,15 +1,24 @@
 import './IntroSection.css';
 
 export const IntroSection = () => {
-    return <section class="main-intro">
-      <div class="main-info">
-        <h1 class="main-heading">Hello, I'm Parthiv</h1>
-        <p class="main-desc">
+
+    const knowMore = (e, target) => {
+      const element = document.getElementById(target);
+      if(target){
+        element.scrollIntoView({behavior:'smooth'});
+      }
+    }
+    return <section className="main-intro">
+      <div className="main-info">
+        <h1 className="main-heading">Hello, I'm Parthiv...!</h1>
+        <p className="main-desc">
           A Full Stack Web Developer & Open Source Contributor. Currently working with MERN stack, Prisma and Docker.
         </p>
         <div className='btn-container'>
-        <a href="" class="btn active">Download Resume</a>
-        <a href="" class="btn outline">Know More &darr;</a>
+        <a href="./resume.docx" className="btn active" download>Download Resume</a>
+        <a href="#" className="btn outline"
+          onClick={(e) => {knowMore(e,'projects')}}
+        >Know More &darr;</a>
         </div>
       </div>
       <div class="main-video">
