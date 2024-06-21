@@ -12,7 +12,7 @@ function App() {
       <div className="nav-position">
         <Navbar />
       </div>
-      <div className='padding-global'>
+      <div className="padding-global">
         <IntroSection />
         <ProjectCard />
         <Skills />

@@ -4,7 +4,7 @@ import './Blog.css';
 export const Blog = () => {
   return (
     <>
-      <section className="blogs" id='blogs'>
+      <section className="blogs" id="blogs">
         <header>My Medium Blogs</header>
         <div className="blog-container">
           {blogs.map((blog, index) => (
@@ -13,13 +13,17 @@ export const Blog = () => {
                 <img src={blog.image} alt="Blog Thumbnail"></img>
               </picture>
               <article>
-                <p className='blog-title'>{blog.title}</p>
-                <p className='blog-description'>{blog.description}</p>
+                <p className="blog-title">{blog.title}</p>
+                <p className="blog-description">{blog.description}</p>
                 <div>
-                <a className='btn-link'
-                href={blog.link} target="_blank" rel="noopener noreferrer">
-                  Read more &rarr;
-                </a>
+                  <a
+                    className="btn-link"
+                    href={blog.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read more &rarr;
+                  </a>
                 </div>
               </article>
             </div>
