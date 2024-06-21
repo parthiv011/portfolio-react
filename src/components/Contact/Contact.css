@@ -85,8 +85,14 @@ form > button {
   text-decoration: none;
   background-color: var(--btncolor);
 }
-form > button:hover{
-    background-color: #3838ce;
-    transition: ease-in-out 1s;
-    cursor: pointer;
+form > button:hover {
+  background-color: #000080;
+  transition: ease-in-out 1s;
+  cursor: pointer;
 }
+/* @media screen and (min-width: 768px){
+  .contact-container{
+    flex-direction: column;
+    width: 100%;
+  }
+} */

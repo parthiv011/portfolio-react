@@ -1,61 +1,131 @@
 :root {
-  --primaryColor: black; /*black*/
-  --secondaryColor: white; /*white */
+  --primaryColor: black; /* black */
+  --secondaryColor: white; /* white */
   --hoverColor: #9999ff;
   --btncolor: #0000ff;
 }
+
 .blogs {
   margin: 4rem;
 }
+
 .blogs > header {
   font-size: 6rem;
   font-weight: 500;
   text-align: center;
 }
+
 .blog-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 3rem;
+  justify-content: center;
 }
+
 .blog-card {
   display: flex;
   margin-top: 4rem;
   flex-direction: column;
-  width: 100%;
+  width: calc(40% - 2rem);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--primaryColor);
+  
 }
+
 .blog-card picture {
   width: 100%;
   object-fit: cover;
 }
+
 .blog-card picture > img {
   width: 100%;
   aspect-ratio: 3 / 2;
   border-radius: 1rem 1rem 0 0;
 }
+
 .blog-title {
   font-size: 3rem;
   font-weight: 300;
+  margin: 1rem 1rem 0.5rem 1rem;
+  color: var(--secondaryColor);
 }
+
 .blog-description {
   font-size: 1.5rem;
   font-weight: 100;
   color: rgb(212, 212, 212);
+  margin: 0 1rem 1rem 1rem;
 }
+
 .blog-card > article > div {
-  margin-top: 1.4rem;
+  margin: 1.4rem 1rem;
 }
+
 .btn-link:link,
 .btn-link:visited {
   color: var(--secondaryColor);
   font-size: 1.8rem;
   text-decoration: none;
-  padding: 1rem 1rem;
+  padding: 1rem;
   border-radius: 1rem;
-  text-decoration: none;
   background-color: var(--btncolor);
 }
 
 .btn-link:hover {
-  background-color: #3838ce;
+  background-color: #000080;
   transition: ease-in-out 1s;
   cursor: pointer;
+}
+
+/* Responsive Design */
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+  .blog-card {
+    width: calc(50% - 2rem);
+  }
+
+  .blogs > header {
+    font-size: 4rem;
+  }
+
+  .blog-title {
+    font-size: 2.5rem;
+  }
+
+  .blog-description {
+    font-size: 1.4rem;
+  }
+
+  .btn-link {
+    font-size: 1.6rem;
+  }
+}
+
+/* For mobile phones and smaller screens */
+@media (max-width: 768px) {
+  .blog-card {
+    width: 100%;
+  }
+
+  .blogs {
+    margin: 2rem;
+  }
+
+  .blogs > header {
+    font-size: 3rem;
+  }
+
+  .blog-title {
+    font-size: 2rem;
+  }
+
+  .blog-description {
+    font-size: 1.2rem;
+  }
+
+  .btn-link {
+    font-size: 1.4rem;
+  }
 }

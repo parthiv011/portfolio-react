@@ -1,6 +1,9 @@
+import React, { useState } from 'react';
 import './Navbar.css';
 
 export const Navbar = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
   const handleScroll = (e, target) => {
     e.preventDefault();
 
@@ -10,18 +13,25 @@ export const Navbar = () => {
     }
   };
 
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
     <header className="header">
       <a href="" className="logo">
         <span id="parthiv">Parthiv</span>
         <span id="parmar">Parmar.</span>
       </a>
-      <nav className="main-nav">
+      <button className="nav-toggle" onClick={toggleNav}>
+        &#9776;
+      </button>
+      <nav className={`main-nav ${isNavOpen ? 'open' : ''}`}>
         <ul className="main-nav-links">
           <li>
             <a
               href="#projects"
-              className="main-nav-links"
+              className="main-nav-link"
               onClick={(e) => handleScroll(e, 'projects')}
             >
               Projects
@@ -30,21 +40,21 @@ export const Navbar = () => {
           <li>
             <a
               href="#"
-              className="main-nav-links"
+              className="main-nav-link"
               onClick={(e) => handleScroll(e, 'blogs')}
             >
               Blogs
             </a>
           </li>
           <li>
-            <a href="#" className="main-nav-links">
+            <a href="#" className="main-nav-link">
               Work
             </a>
           </li>
           <li>
             <a
               href="#"
-              className="main-nav-links"
+              className="main-nav-link"
               onClick={(e) => handleScroll(e, 'contact')}
             >
               Contact Me

@@ -1,6 +1,6 @@
 :root {
-  --primaryColor: black; /*black*/
-  --secondaryColor: white; /*white */
+  --primaryColor: black;
+  --secondaryColor: white;
   --hoverColor: #9999ff;
   --btncolor: #0000ff;
 }
@@ -10,11 +10,15 @@
   flex-direction: column;
   width: 100%;
 }
+
 .projects-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem; /* Adds space between the grid items */
 }
+
 .project-header {
-  color: white;
+  color: var(--secondaryColor);
   font-size: 6rem;
   font-weight: 500;
   text-align: center;
@@ -39,40 +43,95 @@
 .project-info {
   padding: 2rem;
 }
+
 .project-info > h2 {
   font-size: 3rem;
 }
+
 .project-info > p {
   font-size: 2rem;
   font-weight: 200;
-  /* padding: 1rem; */
 }
+
 .links {
   margin-top: 1.4rem;
 }
+
 .links a {
   text-decoration: none;
-  color: white;
+  color: var(--secondaryColor);
   margin-right: 1rem;
-  background-color: blue;
+  background-color: var(--btncolor);
   padding: 1rem;
   border-radius: 1rem;
   font-size: 1.4rem;
 }
+
+.links a:hover {
+  background-color: var(--hoverColor);
+  transition: ease-in-out 1s;
+  cursor: pointer;
+}
+
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
 }
+
 .tech-stack p {
-  border: 1px solid white;
+  border: 1px solid var(--secondaryColor);
   margin: 4px;
   padding: 0.6rem;
   border-radius: 4px;
   font-size: 1.4rem;
 }
 
-.links a:hover {
-  background-color: #3838ce;
-  transition: ease-in-out 1s;
-  cursor: pointer;
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+  .project-header {
+    font-size: 4rem;
+  }
+
+  .project-info > h2 {
+    font-size: 2.5rem;
+  }
+
+  .project-info > p {
+    font-size: 1.8rem;
+  }
+
+  .links a {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+
+  .tech-stack p {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+}
+
+/* For mobile phones and smaller screens */
+@media (max-width: 768px) {
+  .project-header {
+    font-size: 3rem;
+  }
+
+  .project-info > h2 {
+    font-size: 2rem;
+  }
+
+  .project-info > p {
+    font-size: 1.6rem;
+  }
+
+  .links a {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+
+  .tech-stack p {
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
 }

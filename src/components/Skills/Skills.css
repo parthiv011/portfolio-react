@@ -1,32 +1,80 @@
-.skill-section{
+/* Base styles */
+
+.skill-section {
   margin-top: 4rem;
+  padding: 0 1rem; /* Added padding for responsiveness */
 }
 
 .skill-header {
   font-size: 6rem;
   font-weight: 500;
   text-align: center;
+  margin-bottom: 3rem; /* Adjusted margin for responsiveness */
 }
+
 .skill-type {
   font-size: 4rem;
   font-weight: 400;
   padding: 1rem;
+  text-align: center;
 }
 
 .skills {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(12rem, 1fr)
+  ); /* Responsive grid columns */
+  justify-items: center; /* Center items in grid */
 }
+
 .skills > div {
   text-align: center;
   font-size: 1.5rem;
 }
+
 .skills > div > img {
   width: 6.4rem;
   height: 6.4rem;
+  object-fit: contain; /* Ensure images fit within the container */
 }
+
 .skills > div > img:hover {
-    transform: scale(1.2);
-    transition: ease-in-out all .72s;
+  transform: scale(1.2);
+  transition: ease-in-out all 0.72s;
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 1200px) {
+  .skills {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(10rem, 1fr)
+    ); /* Adjust grid columns for medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skill-header {
+    font-size: 4rem; /* Decrease font size for smaller screens */
+  }
+
+  .skill-type {
+    font-size: 3rem; /* Decrease font size for smaller screens */
+  }
+
+  .skills {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(8rem, 1fr)
+    ); /* Adjust grid columns for smaller screens */
+    gap: 1rem; /* Adjust grid gap for smaller screens */
+  }
+
+  .skills > div > img {
+    width: 4rem; /* Decrease image size for smaller screens */
+    height: 4rem; /* Decrease image size for smaller screens */
+  }
 }
