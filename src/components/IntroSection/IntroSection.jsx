@@ -1,13 +1,6 @@
 import './IntroSection.css';
 
 export const IntroSection = () => {
-  const knowMore = (e, target) => {
-    const element = document.getElementById(target);
-    if (target) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section className="main-intro">
       <video className="background-video" src="test.mp4" autoPlay muted loop />
@@ -22,11 +15,8 @@ export const IntroSection = () => {
             Download Resume
           </a>
           <a
-            href="#"
+            href="#projects"
             className="btn outline"
-            onClick={(e) => {
-              knowMore(e, 'projects');
-            }}
           >
             Know More &darr;
           </a>
