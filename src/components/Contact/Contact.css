@@ -13,6 +13,7 @@
   display: flex;
   width: 100%;
   margin-top: 5rem;
+
 }
 .contact-content {
   display: flex;
@@ -90,9 +91,19 @@ form > button:hover {
   transition: ease-in-out 1s;
   cursor: pointer;
 }
-/* @media screen and (min-width: 768px){
+
+@media screen and (max-width: 1003px){
   .contact-container{
     flex-direction: column;
     width: 100%;
   }
-} */
+  form{
+    width: 100%;
+    margin-top: 5rem;
+  }
+  .contact-content{
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+}
