@@ -1,7 +1,7 @@
 const projects = [
   {
-    title: 'Booking.com-Frontend',
-    image: './ProjectImages/payX.png',
+    title: 'BookIt-Frontend',
+    image: './ProjectImages/bookIT-dark.png',
     description: 'Make Portfolio template for developer!!',
     tools: [
       'ReactJs',
@@ -16,8 +16,8 @@ const projects = [
   },
 
   {
-    title: 'Booking.com-Backend',
-    image: './ProjectImages/payX.png',
+    title: 'BookIt-Backend',
+    image: './ProjectImages/bookIT.png',
     description: 'Backend Couse selling website like Udemy and Coursera.',
     tools: ['NodeJs', 'Typescript', 'Multer', 'Prisma', 'Docker'],
     github: 'https://github.com/parthiv011/booking.com-backend',
@@ -37,7 +37,7 @@ const projects = [
       'Tailwind css',
     ],
     github: 'https://github.com/parthiv011/PaymentApp',
-    link: 'https://github.com/parthiv011/PaymentApp',
+    link: 'https://payment-app-client.vercel.app/',
   },
 ];
 

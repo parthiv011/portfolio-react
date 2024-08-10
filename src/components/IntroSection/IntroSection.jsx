@@ -7,17 +7,16 @@ export const IntroSection = () => {
       <div className="main-info">
         <h1 className="main-heading">Hello, I'm Parthiv...!</h1>
         <p className="main-desc">
-          A Full Stack Web Developer & Open Source Contributor. Currently
-          working with MERN stack, Prisma and Docker.
+          I'm Parthiv, a Software Engineer who's all about turning wild ideas
+          into kick-ass web apps. When I'm not submerged in code-commits, You'll
+          find me lost in the perfect frame, chasing light and shadows. Let's
+          team up and build some exceptional products..!
         </p>
         <div className="btn-container">
-          <a href="./resume.docx" className="btn active" download>
+          <a href="Parthiv_resume (3).pdf" className="btn active" download>
             Download Resume
           </a>
-          <a
-            href="#projects"
-            className="btn outline"
-          >
+          <a href="#projects" className="btn outline">
             Know More &darr;
           </a>
         </div>
